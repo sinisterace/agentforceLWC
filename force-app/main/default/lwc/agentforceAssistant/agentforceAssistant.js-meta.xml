@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Agentforce Assistant</masterLabel>
+    <description>Chat component for Agentforce AI</description>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__UtilityBar</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage,lightning__RecordPage,lightning__HomePage">
+            <property name="agentName" type="String" label="Agent Name" description="AI Agent Name" />
+            <property name="defaultDarkMode" type="Boolean" label="Default Dark Mode" description="Enable dark mode by default" />
+            <property name="welcomeMessage" type="String" label="Welcome Message" description="Initial message shown to users" />
+            <property name="allowVoiceMode" type="Boolean" label="Allow Voice Mode" description="Enable voice functionality" />
+            <property name="position" type="String" label="Chat Position" description="Position of the chat window" />
+            <property name="agentId" type="String" label="Agent ID" description="Agentforce agent ID" />
+            <property name="headerText" type="String" label="Header Text" description="Text shown in the chat header" />
+            <property name="elevenlabsApiKey" type="String" label="Eleven Labs API Key" description="API key for Eleven Labs TTS service" />
+        </targetConfig>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="agentName" type="String" label="Agent Name" description="AI Agent Name" />
+            <property name="defaultDarkMode" type="Boolean" label="Default Dark Mode" description="Enable dark mode by default" />
+            <property name="agentId" type="String" label="Agent ID" description="Agentforce agent ID" />
+            <property name="elevenlabsApiKey" type="String" label="Eleven Labs API Key" description="API key for Eleven Labs TTS service" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle> 
